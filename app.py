@@ -44,15 +44,15 @@ def read_json():
 
     # print(data.keys())
 
-    months_list = ['Chennai', 'Mayiladudurai', 'Madurai', 'Ooty', 'Virudhunagar',
-        'Thirunelveli']
+    months_list = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-    temp_list = [33, 38, 43, 20, 39, 35]
+    temp_list = [33, 38, 43, 20, 39, 35, 32, 35, 36, 38, 29, 45]
 
     result_dict = {
         'months'        : months_list,
         'local_data'    : data,
-        'city'          : 'Toronto',
+        'city'          : 'Chennai',
         'title'         : 'Monthly Average Temperature',
         'subtitle'      : 'Source: WorldClimate.com',
         'temp_data'     : temp_list 
