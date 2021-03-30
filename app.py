@@ -33,15 +33,30 @@ def startpy():
     http://0.0.0.0:3000/data
 
 '''
-@app.route("/data", methods=["GET","POST"])
+@app.route("/data", methods=["GET"])
 def read_json():
 
+    data = None
     with open(FILEPATH) as json_file:
         data = json.load(json_file)
 
     # print(data)
 
-    return jsonify(data)
+    months_list = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+    temp_list = [120, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 23, 23.3, 18.3, 13.9, 9.6]
+
+    result_dict = {
+        'months' : months_list,
+        'local_data' : data,
+        'city' : 'Toronto',
+        'title' : 'Monthly Average Temperature',
+        'subtitle' : 'Source: WorldClimate.com',
+        'temp_data' : temp_list 
+    }
+
+    return jsonify(result_dict)
 
     # return render_template("index.html", result = data)
 
