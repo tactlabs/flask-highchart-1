@@ -42,24 +42,26 @@ def read_json():
 
     # print(data)
 
-    months_list = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    # print(data.keys())
 
-    temp_list = [120, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 23, 23.3, 18.3, 13.9, 9.6]
+    months_list = ['Chennai', 'Mayiladudurai', 'Madurai', 'Ooty', 'Virudhunagar',
+        'Thirunelveli']
+
+    temp_list = [33, 38, 43, 20, 39, 35]
 
     result_dict = {
-        'months' : months_list,
-        'local_data' : data,
-        'city' : 'Toronto',
-        'title' : 'Monthly Average Temperature',
-        'subtitle' : 'Source: WorldClimate.com',
-        'temp_data' : temp_list 
+        'months'        : months_list,
+        'local_data'    : data,
+        'city'          : 'Toronto',
+        'title'         : 'Monthly Average Temperature',
+        'subtitle'      : 'Source: WorldClimate.com',
+        'temp_data'     : temp_list 
     }
 
     return jsonify(result_dict)
 
-    # return render_template("index.html", result = data)
+    # return render_template("index.html", data = data)
 
 if __name__ == "__main__":
-    app.run( debug = True,host="0.0.0.0",port = PORT)
+    app.run( debug = True, host="0.0.0.0", port = PORT)
     
