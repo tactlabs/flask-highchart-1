@@ -10,7 +10,7 @@ import random
 import json
 
 app  = Flask(__name__)
-PORT = 3001
+PORT = 3029
 
 FILEPATH = "data.json"
     
